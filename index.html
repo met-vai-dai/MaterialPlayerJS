@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lecteur</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+
+<div class="row">
+    <ul class="tabs tabs-fixed-width z-depth-2">
+        <li class="tab"><a href="#home">Accueil</a></li>
+        <li class="tab"><a href="#audio" >Audio</a></li>
+        <li class="tab"><a href="#video" class="active">Vidéo</a></li>
+    </ul>
+    
+    <div class="container">
+
+    <div id="home" class="col s12"><h3>Bienvenue sur PlayTube</h3><h5>Un site de lecture d'audio et de vidéo</h5></div>
+    <div id="audio" class="col s12">
+        <h3>Audio</h3>
+        <div class="col s12 m6 l4">
+            <div class="card hoverable blue-grey darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Podcast #1 📻</span>
+                    <audio id="audio1" src="audio/Podcast1.mp3" ontimeupdate="time('1', 'audio')">Votre navigateur ne supporte pas la balise audio merci de le mettre à jour ou de changer de navigateur.</audio>
+                </div>
+                <div class="card-action">
+                    <a onclick="play('1','audio')" onmouseover="this.style.cursor='pointer'">
+                        <i class="material-icons" id="playaudio1" style="display:inline;">play_arrow</i>
+                        <i class="material-icons" id="pauseaudio1" style="display:none;">pause</i>
+                        <i class="material-icons" id="replayaudio1" style="display:none;">replay</i>
+                    </a>
+                    <a onclick="vol('1', 'audio')" onmouseover="this.style.cursor='pointer'">
+                        <i class="material-icons" id="sonaudio1" style="display:inline;">volume_up</i>
+                        <i class="material-icons" id="muteaudio1" style="display:none;">volume_off</i>
+                    </a>
+                    <div class="time"><p id="timeaudio1"> </p></div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="card hoverable blue-grey darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Instru : All I need </span>
+                    <audio id="audio2" src="audio/AllINeed2.mp3" ontimeupdate="time('2', 'audio')">Votre navigateur ne supporte pas la balise audio merci de le mettre à jour ou de changer de navigateur.</audio>
+                </div>
+                <div class="card-action">
+                    <a onclick="play('2','audio')" onmouseover="this.style.cursor='pointer'">
+                        <i class="material-icons" id="playaudio2" style="display:inline;">play_arrow</i>
+                        <i class="material-icons" id="pauseaudio2" style="display:none;">pause</i>
+                        <i class="material-icons" id="replayaudio2" style="display:none;">replay</i>
+                    </a>
+                    <a onclick="vol('2', 'audio')" onmouseover="this.style.cursor='pointer'">
+                        <i class="material-icons" id="sonaudio2" style="display:inline;">volume_up</i>
+                        <i class="material-icons" id="muteaudio2" style="display:none;">volume_off</i>
+                    </a>
+                    <div class="time"><p id="timeaudio2"> </p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="video" class="col s12">
+        <h3>Vidéo</h3>
+        <div class="card hoverable blue-grey darken-1 large">
+            <div class="card-content white-text">
+                <span class="card-title">Film animation</span> 
+                <video id="video1" src="video/video2.mp4" ontimeupdate="time('1', 'video')">Votre navigateur ne supporte pas la vidéo merci de changer de navigateur ou le mettre à jour.</video>
+            </div>
+            <div class="card-action">
+                <a onclick="play('1', 'video')"  onmouseover="this.style.cursor='pointer'">
+                    <i class="material-icons" id="playvideo1" style="display:inline;">play_arrow</i>
+                    <i class="material-icons" id="pausevideo1" style="display:none;">pause</i>
+                    <i class="material-icons" id="replayvideo1" style="display:none;">replay</i>
+                </a>
+                <a onclick="vol('1', 'video')"  onmouseover="this.style.cursor='pointer'">
+                    <i class="material-icons" id="sonvideo1" style="display:inline;">volume_up</i>
+                    <i class="material-icons" id="mutevideo1" style="display:none;">volume_off</i>
+                </a>
+                <div class="time"><p id="timevideo1"> </p></div>
+            </div>
+        </div>
+        <div class="card hoverable blue-grey darken-1 large">
+            <div class="card-content white-text">
+                <span class="card-title">Lego Tricks</span> 
+                <video id="video2" src="video/video1.mp4" ontimeupdate="time('2', 'video')">Votre navigateur ne supporte pas la vidéo merci de changer de navigateur ou le mettre à jour.</video>
+            </div>
+            <div class="card-action">
+                <a onclick="play('2', 'video')"  onmouseover="this.style.cursor='pointer'">
+                    <i class="material-icons" id="playvideo2" style="display:inline;">play_arrow</i>
+                    <i class="material-icons" id="pausevideo2" style="display:none;">pause</i>
+                    <i class="material-icons" id="replayvideo2" style="display:none;">replay</i>
+                </a>
+                <a onclick="vol('2', 'video')"  onmouseover="this.style.cursor='pointer'">
+                    <i class="material-icons" id="sonvideo2" style="display:inline;">volume_up</i>
+                    <i class="material-icons" id="mutevideo2" style="display:none;">volume_off</i>
+                </a>
+                <div class="time"><p id="timevideo2"> </p></div>
+            </div>
+        </div>
+    </div>
+    
+</div></div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
+
+
+<!--
+
+var idNumber
+var type
+
+<div class="card hoverable blue-grey darken-1">
+    <div class="card-content white-text">
+        <span class="card-title">Podcast #1 📻</span>
+        <audio id="audio1" src="[SRC].mp3" ontimeupdate="time('[idplayer]', '[type]')">Votre navigateur ne supporte pas la balise audio merci de le mettre à jour ou de changer de navigateur.</audio>
+    </div>
+    <div class="card-action">
+        <a onclick="play('[idNumber]','[type]')" onmouseover="this.style.cursor='pointer'">
+            <i class="material-icons" id="play+[type]+[idNumber]" style="display:inline;">play_arrow</i>
+            <i class="material-icons" id="pause+[type]+[idNumber]" style="display:none;">pause</i>
+        </a>
+        <a onclick="vol('1', 'audio')" onmouseover="this.style.cursor='pointer'">
+            <i class="material-icons" id="son+[type]+[idNumber]" style="display:inline;">volume_up</i>
+            <i class="material-icons" id="mute+[type]+[idNumber]" style="display:none;">volume_off</i>
+        </a>
+        <div class="time"><p id="time+[idNumber]"> </p></div>
+    </div>
+</div>
+
+-->
